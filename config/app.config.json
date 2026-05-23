@@ -1,0 +1,42 @@
+{
+  "daemon": {
+    "host": "127.0.0.1",
+    "httpPort": 47821,
+    "wsPort": 47822
+  },
+  "tokenPath": "~/.claude/.stardew-clawd-token",
+  "claude": {
+    "binary": "claude",
+    "streamFormat": "stream-json",
+    "extraArgs": ["--verbose"]
+  },
+  "hooks": {
+    "preToolUseTimeoutSec": 600,
+    "settingsFileLocal": ".claude/settings.json",
+    "settingsFileGlobal": "~/.claude/settings.json",
+    "defaultScope": "local",
+    "markerKey": "_stardewClawd",
+    "events": [
+      "SessionStart",
+      "UserPromptSubmit",
+      "PreToolUse",
+      "PostToolUse",
+      "Notification",
+      "Stop",
+      "SubagentStop"
+    ],
+    "eventMatchers": {
+      "PreToolUse": "AskUserQuestion|ExitPlanMode"
+    }
+  },
+  "ui": {
+    "activityDebounceMs": 250,
+    "animationFps": 8,
+    "transcript": {
+      "foldToolGroups": true,
+      "tailExternal": true,
+      "tailPollMs": 500,
+      "tailReadFromStart": true
+    }
+  }
+}

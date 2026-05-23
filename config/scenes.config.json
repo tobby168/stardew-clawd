@@ -1,0 +1,12 @@
+{
+  "comment": "Scene registry — ordered list of available scenes. The recycle button in SceneSwitcher cycles through `order`. `default` is used when no persisted scene exists (or it points at a missing id).",
+  "default": "cozy-office",
+  "order": ["cozy-office", "modern-office", "school", "lab", "construction"],
+  "scenes": {
+    "cozy-office":   { "displayName": "Cozy Office",   "icon": "🌾" },
+    "modern-office": { "displayName": "Modern Office", "icon": "💼" },
+    "school":        { "displayName": "School",        "icon": "✏️" },
+    "lab":           { "displayName": "Lab",           "icon": "🧪" },
+    "construction":  { "displayName": "Construction",  "icon": "🪜" }
+  }
+}

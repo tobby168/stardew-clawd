@@ -1,0 +1,51 @@
+{
+  "tickMs": 100,
+  "burstWindowMs": 800,
+  "walkCommitMs": 1200,
+  "coffeeBreakIdleMs": 30000,
+  "walkSpeedTilesPerSec": 4,
+  "minDwellMs": {
+    "spawning": 0,
+    "at_desk_idle": 400,
+    "at_desk_thinking": 400,
+    "at_desk_typing": 400,
+    "at_desk_reading": 600,
+    "at_desk_coding": 600,
+    "at_desk_bash": 600,
+    "walking_to_bookshelf": 0,
+    "at_bookshelf": 1500,
+    "walking_to_coffee": 0,
+    "at_coffee": 2000,
+    "walking_back_to_desk": 0,
+    "holding_question": 0,
+    "holding_plan": 0,
+    "done": 0,
+    "leaving": 0
+  },
+  "defaultWaypoints": {
+    "door":      { "x": 0,    "y": 9.5 },
+    "bookshelf": { "x": 2.0,  "y": 7.5 },
+    "coffee":    { "x": 13.0, "y": 4.5 }
+  },
+  "intentToDeskState": {
+    "idle":     "at_desk_idle",
+    "thinking": "at_desk_thinking",
+    "typing":   "at_desk_typing",
+    "reading":  "at_desk_reading",
+    "writing":  "at_desk_coding",
+    "bash":     "at_desk_bash"
+  },
+  "intentPriority": {
+    "waiting_question": 100,
+    "waiting_plan":     100,
+    "writing":           70,
+    "bash":              65,
+    "looking_up":        60,
+    "reading":           55,
+    "typing":            40,
+    "thinking":          30,
+    "waiting_idle":      20,
+    "idle":              10,
+    "done":               5
+  }
+}

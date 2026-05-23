@@ -1,0 +1,27 @@
+{
+  "tilemap": {
+    "tileSize": 16,
+    "roomCols": 16,
+    "roomRows": 11,
+    "background": "assets/scene/office_background.png"
+  },
+  "characters": [
+    {
+      "id": "worker-base",
+      "sheet": "assets/sprites/worker_base.png",
+      "frameWidth": 16,
+      "frameHeight": 32,
+      "tints": [16777215, 16763020, 13434828, 16763955]
+    }
+  ],
+  "emotes": {
+    "sheet": "assets/sprites/emotes.png",
+    "frameWidth": 16,
+    "frameHeight": 16,
+    "frames": {
+      "exclaim": 0,
+      "ellipsis": 1,
+      "heart": 2
+    }
+  }
+}

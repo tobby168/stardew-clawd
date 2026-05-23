@@ -1,0 +1,15 @@
+{
+  "minZoom": 0.5,
+  "maxZoom": 8.0,
+  "defaultZoom": 2.0,
+  "autoFitMaxZoom": 12.0,
+  "sliderStep": 0.05,
+  "sliderButtonStep": 0.5,
+  "dragSensitivity": 1.0,
+  "centroidLerpSpeed": 0.08,
+  "edgePaddingTiles": 4,
+  "firstSpawnHardCut": true,
+  "clickDragThresholdPx": 3,
+  "recenterOnPopulationChange": true,
+  "recenterMinIntervalMs": 800
+}

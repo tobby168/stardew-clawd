@@ -1,0 +1,175 @@
+{
+  "comment": "Multi-room office. Each room defines its own decorations + desks in ROOM-LOCAL coordinates (decoration x/y in pixels, desk x/y in tile units). The room's originTileX is computed at load time by stacking rooms left-to-right separated by wallThickness tiles. Renderer activates rooms incrementally based on worker count (workersPerRoom).",
+  "wallThickness": 0,
+  "growth": {
+    "workersPerRoom": 6
+  },
+  "rooms": [
+    {
+      "id": "office-1",
+      "theme": "office",
+      "cols": 16,
+      "rows": 16,
+      "door": { "x": 0, "y": 9.5 },
+      "desks": [
+        { "id": "desk-1", "x": 2,  "y": 4, "sitX": 2,  "sitY": 5 },
+        { "id": "desk-2", "x": 7,  "y": 4, "sitX": 7,  "sitY": 5 },
+        { "id": "desk-3", "x": 12, "y": 4, "sitX": 12, "sitY": 5 },
+        { "id": "desk-4", "x": 2,  "y": 8, "sitX": 2,  "sitY": 9 },
+        { "id": "desk-5", "x": 7,  "y": 8, "sitX": 7,  "sitY": 9 },
+        { "id": "desk-6", "x": 12, "y": 8, "sitX": 12, "sitY": 9 }
+      ],
+      "decorations": [
+        { "type": "window",         "x": 96,  "y": 4 },
+        { "type": "picture",        "x": 52,  "y": 5 },
+        { "type": "picture",        "x": 164, "y": 5 },
+        { "type": "sconce",         "x": 24,  "y": 4 },
+        { "type": "sconce",         "x": 184, "y": 4 },
+        { "type": "rug",            "x": 100, "y": 96 },
+        { "type": "bookshelf",      "x": 16,  "y": 106 },
+        { "type": "coffee-machine", "x": 226, "y": 48 },
+        { "type": "plant",          "x": 2,   "y": 144, "variant": "leafy" },
+        { "type": "plant",          "x": 242, "y": 144, "variant": "spike" }
+      ]
+    },
+    {
+      "id": "library-2",
+      "theme": "library",
+      "cols": 16,
+      "rows": 16,
+      "desks": [
+        { "id": "desk-7",  "x": 5,  "y": 4, "sitX": 5,  "sitY": 5 },
+        { "id": "desk-8",  "x": 10, "y": 4, "sitX": 10, "sitY": 5 },
+        { "id": "desk-9",  "x": 5,  "y": 8, "sitX": 5,  "sitY": 9 },
+        { "id": "desk-10", "x": 10, "y": 8, "sitX": 10, "sitY": 9 },
+        { "id": "desk-11", "x": 7,  "y": 6, "sitX": 7,  "sitY": 7 },
+        { "id": "desk-12", "x": 12, "y": 6, "sitX": 12, "sitY": 7 }
+      ],
+      "decorations": [
+        { "type": "window",    "x": 96,  "y": 4 },
+        { "type": "sconce",    "x": 40,  "y": 4 },
+        { "type": "sconce",    "x": 200, "y": 4 },
+        { "type": "picture",   "x": 4,   "y": 5 },
+        { "type": "bookshelf", "x": 16,  "y": 50 },
+        { "type": "bookshelf", "x": 48,  "y": 50 },
+        { "type": "bookshelf", "x": 200, "y": 50 },
+        { "type": "bookshelf", "x": 16,  "y": 106 },
+        { "type": "bookshelf", "x": 200, "y": 106 },
+        { "type": "bookshelf", "x": 232, "y": 106 },
+        { "type": "rug",       "x": 100, "y": 96 },
+        { "type": "plant",     "x": 2,   "y": 144, "variant": "leafy" },
+        { "type": "plant",     "x": 242, "y": 144, "variant": "spike" }
+      ]
+    },
+    {
+      "id": "lounge-3",
+      "theme": "lounge",
+      "cols": 16,
+      "rows": 16,
+      "desks": [
+        { "id": "desk-13", "x": 3,  "y": 4, "sitX": 3,  "sitY": 5 },
+        { "id": "desk-14", "x": 8,  "y": 4, "sitX": 8,  "sitY": 5 },
+        { "id": "desk-15", "x": 13, "y": 4, "sitX": 13, "sitY": 5 },
+        { "id": "desk-16", "x": 3,  "y": 8, "sitX": 3,  "sitY": 9 },
+        { "id": "desk-17", "x": 8,  "y": 8, "sitX": 8,  "sitY": 9 },
+        { "id": "desk-18", "x": 13, "y": 8, "sitX": 13, "sitY": 9 }
+      ],
+      "decorations": [
+        { "type": "window",         "x": 32,  "y": 4 },
+        { "type": "window",         "x": 160, "y": 4 },
+        { "type": "picture",        "x": 116, "y": 5 },
+        { "type": "sconce",         "x": 100, "y": 4 },
+        { "type": "sconce",         "x": 152, "y": 4 },
+        { "type": "rug",            "x": 60,  "y": 96 },
+        { "type": "rug",            "x": 140, "y": 96 },
+        { "type": "coffee-machine", "x": 14,  "y": 48 },
+        { "type": "coffee-machine", "x": 226, "y": 48 },
+        { "type": "plant",          "x": 2,   "y": 144, "variant": "spike" },
+        { "type": "plant",          "x": 100, "y": 144, "variant": "leafy" },
+        { "type": "plant",          "x": 242, "y": 144, "variant": "leafy" }
+      ]
+    },
+    {
+      "id": "corridor-4",
+      "theme": "corridor",
+      "cols": 20,
+      "rows": 16,
+      "desks": [
+        { "id": "desk-19", "x": 3,  "y": 4, "sitX": 3,  "sitY": 5 },
+        { "id": "desk-20", "x": 9,  "y": 4, "sitX": 9,  "sitY": 5 },
+        { "id": "desk-21", "x": 15, "y": 4, "sitX": 15, "sitY": 5 },
+        { "id": "desk-22", "x": 3,  "y": 8, "sitX": 3,  "sitY": 9 },
+        { "id": "desk-23", "x": 9,  "y": 8, "sitX": 9,  "sitY": 9 },
+        { "id": "desk-24", "x": 15, "y": 8, "sitX": 15, "sitY": 9 }
+      ],
+      "decorations": [
+        { "type": "window",         "x": 32,  "y": 4 },
+        { "type": "window",         "x": 112, "y": 4 },
+        { "type": "window",         "x": 192, "y": 4 },
+        { "type": "window",         "x": 272, "y": 4 },
+        { "type": "sconce",         "x": 8,   "y": 4 },
+        { "type": "sconce",         "x": 96,  "y": 4 },
+        { "type": "sconce",         "x": 176, "y": 4 },
+        { "type": "sconce",         "x": 256, "y": 4 },
+        { "type": "rug",            "x": 132, "y": 96 },
+        { "type": "bookshelf",      "x": 16,  "y": 106 },
+        { "type": "coffee-machine", "x": 290, "y": 48 },
+        { "type": "plant",          "x": 2,   "y": 144, "variant": "leafy" },
+        { "type": "plant",          "x": 100, "y": 144, "variant": "leafy" },
+        { "type": "plant",          "x": 200, "y": 144, "variant": "spike" },
+        { "type": "plant",          "x": 306, "y": 144, "variant": "spike" }
+      ]
+    },
+    {
+      "id": "office-5",
+      "theme": "office",
+      "cols": 16,
+      "rows": 16,
+      "desks": [
+        { "id": "desk-25", "x": 2,  "y": 4, "sitX": 2,  "sitY": 5 },
+        { "id": "desk-26", "x": 7,  "y": 4, "sitX": 7,  "sitY": 5 },
+        { "id": "desk-27", "x": 12, "y": 4, "sitX": 12, "sitY": 5 },
+        { "id": "desk-28", "x": 2,  "y": 8, "sitX": 2,  "sitY": 9 },
+        { "id": "desk-29", "x": 7,  "y": 8, "sitX": 7,  "sitY": 9 },
+        { "id": "desk-30", "x": 12, "y": 8, "sitX": 12, "sitY": 9 }
+      ],
+      "decorations": [
+        { "type": "window",         "x": 96,  "y": 4 },
+        { "type": "picture",        "x": 52,  "y": 5 },
+        { "type": "picture",        "x": 164, "y": 5 },
+        { "type": "sconce",         "x": 24,  "y": 4 },
+        { "type": "sconce",         "x": 184, "y": 4 },
+        { "type": "rug",            "x": 100, "y": 96 },
+        { "type": "bookshelf",      "x": 16,  "y": 106 },
+        { "type": "coffee-machine", "x": 226, "y": 48 },
+        { "type": "plant",          "x": 2,   "y": 144, "variant": "spike" },
+        { "type": "plant",          "x": 242, "y": 144, "variant": "leafy" }
+      ]
+    },
+    {
+      "id": "library-6",
+      "theme": "library",
+      "cols": 16,
+      "rows": 16,
+      "desks": [
+        { "id": "desk-31", "x": 5,  "y": 4, "sitX": 5,  "sitY": 5 },
+        { "id": "desk-32", "x": 10, "y": 4, "sitX": 10, "sitY": 5 },
+        { "id": "desk-33", "x": 5,  "y": 8, "sitX": 5,  "sitY": 9 },
+        { "id": "desk-34", "x": 10, "y": 8, "sitX": 10, "sitY": 9 },
+        { "id": "desk-35", "x": 7,  "y": 6, "sitX": 7,  "sitY": 7 },
+        { "id": "desk-36", "x": 12, "y": 6, "sitX": 12, "sitY": 7 }
+      ],
+      "decorations": [
+        { "type": "window",    "x": 96,  "y": 4 },
+        { "type": "sconce",    "x": 40,  "y": 4 },
+        { "type": "sconce",    "x": 200, "y": 4 },
+        { "type": "bookshelf", "x": 16,  "y": 50 },
+        { "type": "bookshelf", "x": 48,  "y": 50 },
+        { "type": "bookshelf", "x": 200, "y": 50 },
+        { "type": "bookshelf", "x": 232, "y": 50 },
+        { "type": "rug",       "x": 100, "y": 96 },
+        { "type": "plant",     "x": 2,   "y": 144, "variant": "spike" }
+      ]
+    }
+  ]
+}

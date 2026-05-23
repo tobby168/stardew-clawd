@@ -1,0 +1,53 @@
+{
+  "$comment": "Beats for the ~1.5-min Stardew Clawd intro video. Feature-focused tour — no technique bragging. Each beat: TTS text + an action key the orchestrator runs WHILE the audio plays. A global ambient ticker fires random tool activity on all workers throughout, so the office is never visually still.",
+  "voice": "echo",
+  "model": "gpt-4o-mini-tts",
+  "instructions": "Warm, conversational tech-doc voice. Even pace. Slight pauses at periods.",
+  "beats": [
+    {
+      "id": "01-hook",
+      "text": "Claude Code sessions are invisible. You start one in a terminal, and you wait. Stardew Clawd turns every running session into a pixel-art worker, sitting at a desk in a cozy office.",
+      "action": "reset-then-spawn-3"
+    },
+    {
+      "id": "02-activity",
+      "text": "When Claude reads a file, the worker reads. When it edits code, they type. When it runs a shell command, they bash on the keyboard. The whole office hums along with what your sessions are actually doing.",
+      "action": "cycle-states-tour"
+    },
+    {
+      "id": "03-ask",
+      "text": "When Claude needs your input — a question, or a plan to approve — a sign pops up over the worker's head. Click them to answer right there.",
+      "action": "trigger-ask"
+    },
+    {
+      "id": "04-answer",
+      "text": "Your answer flows back to Claude and the session continues. No switching to the terminal, no losing the thread.",
+      "action": "answer-question-delayed"
+    },
+    {
+      "id": "05-panel",
+      "text": "Click any worker to open their transcript. Long bursts of tool calls fold into a single chip — twelve reads collapse to one row you can expand on demand.",
+      "action": "fake-transcript"
+    },
+    {
+      "id": "06-multi-room",
+      "text": "Hire more workers and the office grows. Multiple rooms, drag to pan the camera, slider to zoom out and see everyone at once.",
+      "action": "spawn-more-then-pan"
+    },
+    {
+      "id": "07-themes",
+      "text": "Don't like the cozy farm look? Swap scenes. Modern office, school, lab, construction site — same workers, same desks, totally different vibe.",
+      "action": "cycle-themes"
+    },
+    {
+      "id": "08-quota",
+      "text": "And up in the corner, a live readout of your Claude Code quota — five-hour and weekly bars — so you always know how much runway you have left.",
+      "action": "zoom-in-status"
+    },
+    {
+      "id": "09-outro",
+      "text": "That's Stardew Clawd. Pixel-art workers for your Claude Code sessions. It's open source — link in the description.",
+      "action": "outro"
+    }
+  ]
+}

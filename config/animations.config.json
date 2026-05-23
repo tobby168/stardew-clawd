@@ -1,0 +1,54 @@
+{
+  "fps": 8,
+  "states": {
+    "idle":             { "row": 0, "frames": 2, "loop": true },
+    "typing":           { "row": 1, "frames": 4, "loop": true },
+    "bash":             { "row": 2, "frames": 4, "loop": true },
+    "reading":          { "row": 3, "frames": 4, "loop": true },
+    "writing":          { "row": 4, "frames": 4, "loop": true },
+    "looking_up":       { "row": 5, "frames": 4, "loop": true },
+    "waiting_approval": { "row": 6, "frames": 3, "loop": true },
+    "walking":          { "row": 7, "frames": 4, "loop": true },
+    "drinking":         { "row": 8, "frames": 3, "loop": true },
+    "thinking":         { "row": 9, "frames": 2, "loop": true },
+    "holding_sign":     { "row": 10, "frames": 2, "loop": true }
+  },
+  "toolToActivity": {
+    "Bash": "bash",
+    "Read": "reading",
+    "Grep": "reading",
+    "Glob": "reading",
+    "TodoWrite": "reading",
+    "Edit": "writing",
+    "Write": "writing",
+    "MultiEdit": "writing",
+    "NotebookEdit": "writing",
+    "WebFetch": "looking_up",
+    "WebSearch": "looking_up",
+    "Task": "thinking",
+    "AskUserQuestion": "waiting_question",
+    "ExitPlanMode": "waiting_plan"
+  },
+  "workerStateToAnim": {
+    "spawning":              "walking",
+    "at_desk_idle":          "idle",
+    "at_desk_thinking":      "thinking",
+    "at_desk_typing":        "typing",
+    "at_desk_coding":        "writing",
+    "at_desk_reading":       "reading",
+    "at_desk_bash":          "bash",
+    "walking_to_bookshelf":  "walking",
+    "at_bookshelf":          "looking_up",
+    "walking_to_coffee":     "walking",
+    "at_coffee":             "drinking",
+    "walking_back_to_desk":  "walking",
+    "holding_question":      "holding_sign",
+    "holding_plan":          "holding_sign",
+    "done":                  "idle",
+    "leaving":               "walking"
+  },
+  "fallbackStates": {
+    "thinking": "thinking",
+    "unknown_tool": "typing"
+  }
+}

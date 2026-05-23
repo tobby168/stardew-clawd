@@ -44,7 +44,12 @@ function createWindow() {
 
   if (process.env.ELECTRON_RENDERER_URL) {
     mainWindow.loadURL(process.env.ELECTRON_RENDERER_URL);
-    mainWindow.webContents.openDevTools({ mode: 'detach' });
+    // Opt-in DevTools — auto-opening obscures the office during recordings
+    // and screenshots. Set STARDEW_DEVTOOLS=1 when you actually want them,
+    // or press Cmd+Opt+I at runtime.
+    if (process.env.STARDEW_DEVTOOLS === '1') {
+      mainWindow.webContents.openDevTools({ mode: 'detach' });
+    }
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'));
   }

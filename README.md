@@ -4,7 +4,7 @@
 > sessions as pixel-art office workers — and lets you drive them from
 > the office, no terminal required.
 
-## 90-second tour
+## 60-second tour
 
 https://github.com/tobby168/stardew-clawd/releases/download/v0.1.0/stardew-clawd-intro.mp4
 

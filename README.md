@@ -49,15 +49,6 @@ I'm here as a director and taste-maker, not an author. If you spot
 something weird or want to extend it, the codebase is small enough to
 read end-to-end — and Claude is happy to keep going.
 
----
-
-Every running Claude Code session is a worker at a desk. Tools fire,
-they shift between coding, reading, bashing, thinking. Claude needs
-your input and a `?` sign pops up over their head. Click them to open
-a chat panel and type a message — that resumes the session headlessly
-behind the scenes (`claude --resume <id> -p`). Everything is rendered
-from procedurally-generated pixel sprites; no asset packs to ship.
-
 ## What it does
 
 - **Watches Claude Code's hook events** and renders every session as a

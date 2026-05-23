@@ -37,9 +37,19 @@ command -v ffmpeg >/dev/null  || { red "ffmpeg not installed (brew install ffmpe
 command -v ffprobe >/dev/null || { red "ffprobe not installed (comes with ffmpeg)"; exit 1; }
 command -v osascript >/dev/null || { red "osascript missing — this script is macOS only"; exit 1; }
 
+# Reset persisted scene to cozy-office so the intro always opens on the
+# Stardew-y farm look. Without this, the previous session's last scene
+# (whatever the theme-cycle landed on) persists across reboots and the
+# next recording starts mid-cycle.
+SCENE_FILE="$HOME/Library/Application Support/stardew-clawd/scene.json"
+mkdir -p "$(dirname "$SCENE_FILE")"
+echo '{ "sceneId": "cozy-office" }' > "$SCENE_FILE"
+green "Persisted scene reset to cozy-office."
+
 # Daemon reachable?
 if ! curl -sf "http://127.0.0.1:9222/json/version" >/dev/null; then
   red "Electron CDP not reachable at 127.0.0.1:9222 — start the app with: npm run dev"
+  red "(Scene was just reset to cozy-office; restart dev so the change loads.)"
   exit 1
 fi
 

@@ -1,8 +1,11 @@
 # 🌾 Stardew Clawd
 
-https://github.com/tobby168/stardew-clawd/releases/download/v0.1.0/stardew-clawd-intro.mp4
 
-_(if the inline player doesn't load, [grab the mp4 from the release page](https://github.com/tobby168/stardew-clawd/releases/tag/v0.1.0))_
+https://github.com/user-attachments/assets/0b713262-bd9a-4edf-bb79-74921a65245d
+
+
+
+
 
 ## Hi 👋
 

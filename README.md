@@ -1,14 +1,33 @@
 # 🌾 Stardew Clawd
 
-> A Stardew Valley-style desktop app that visualizes your Claude Code
-> sessions as pixel-art office workers — and lets you drive them from
-> the office, no terminal required.
-
-## 60-second tour
-
 https://github.com/tobby168/stardew-clawd/releases/download/v0.1.0/stardew-clawd-intro.mp4
 
 _(if the inline player doesn't load, [grab the mp4 from the release page](https://github.com/tobby168/stardew-clawd/releases/tag/v0.1.0))_
+
+## Hi 👋
+
+Stardew Valley is one of my favorite games — that warm, slow, pixel-art
+world where every little worker has a job and a corner of the farm to
+tend. Claude Code, meanwhile, has quietly become part of my every
+day — both in my routine work and in the side projects I tinker with
+at night.
+
+Lately though, the two worlds have started feeling oddly similar.
+People are spawning tens of Claude Code agents at once, working on
+different repos, different features, different bugs — and it's easy
+to lose track of who's doing what, who's stuck, who's waiting on you.
+Terminals are great for one session. They're a nightmare for ten.
+
+**Stardew Clawd** is my attempt to give that swarm a place to live.
+Every running Claude Code session becomes a pixel-art worker at a
+desk. You can see them coding, reading, bashing, thinking. When one
+needs your input, a `?` sign pops up over their head — click them
+to answer right there. It's still real work, but it feels like a
+cozy office instead of a wall of scrolling text.
+
+Honestly, I just find that managing agents goes better when I'm in a
+good mood — and a little wooden farmhouse full of busy pixel workers
+puts me in one.
 
 ---
 

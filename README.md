@@ -32,6 +32,23 @@ Honestly, I just find that managing agents goes better when I'm in a
 good mood — and a little wooden farmhouse full of busy pixel workers
 puts me in one.
 
+## A note on how this was built 🤖
+
+This is a **vibe-coding project**. I didn't write a single line of code
+by hand — I just talked to Claude Code, described what I wanted, looked
+at the result, and asked for the next thing. The whole codebase, every
+pixel sprite, the state machine, the hook bridge, the procedural rooms,
+all of it: written by Claude.
+
+The intro video at the top of this README is the same story — Claude
+wrote the narration, OpenAI's TTS voiced it, Playwright drove the UI on
+a recording timeline, ffmpeg captured the screen and muxed the audio.
+No human hands on the keyboard for any of it.
+
+I'm here as a director and taste-maker, not an author. If you spot
+something weird or want to extend it, the codebase is small enough to
+read end-to-end — and Claude is happy to keep going.
+
 ---
 
 Every running Claude Code session is a worker at a desk. Tools fire,

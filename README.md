@@ -4,6 +4,14 @@
 > sessions as pixel-art office workers — and lets you drive them from
 > the office, no terminal required.
 
+## 90-second tour
+
+https://github.com/tobby168/stardew-clawd/releases/download/v0.1.0/stardew-clawd-intro.mp4
+
+_(if the inline player doesn't load, [grab the mp4 from the release page](https://github.com/tobby168/stardew-clawd/releases/tag/v0.1.0))_
+
+---
+
 Every running Claude Code session is a worker at a desk. Tools fire,
 they shift between coding, reading, bashing, thinking. Claude needs
 your input and a `?` sign pops up over their head. Click them to open

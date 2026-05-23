@@ -191,3 +191,19 @@ ffmpeg -hide_banner -loglevel warning \
 
 green "✅ done: $FINAL ($(du -h "$FINAL" | cut -f1))"
 echo "Preview: open $FINAL"
+
+# ----- web-compressed variant ----------------------------------------------
+# GitHub's inline README video player needs assets that stream cleanly, and
+# raw retina-resolution recordings are large (25-60MB). Downscale to 1700x900
+# and re-encode at CRF 27 — pixel-art compresses extremely well, so the result
+# typically lands around 2-3MB with no visible quality loss at README scale.
+FINAL_WEB="$OUT_DIR/final-web.mp4"
+rm -f "$FINAL_WEB"
+green "Encoding web-friendly variant → $FINAL_WEB"
+ffmpeg -hide_banner -loglevel warning -y \
+  -i "$FINAL" \
+  -vf "scale=1700:900:flags=lanczos" \
+  -c:v libx264 -preset slow -crf 27 -pix_fmt yuv420p -movflags +faststart \
+  -c:a aac -b:a 96k -ac 1 \
+  "$FINAL_WEB"
+green "✅ web variant: $FINAL_WEB ($(du -h "$FINAL_WEB" | cut -f1))"

@@ -1,6 +1,9 @@
 {
-  "intercept": ["AskUserQuestion", "ExitPlanMode"],
-  "interceptExternalSessions": false,
+  "intercept": [
+    "AskUserQuestion",
+    "ExitPlanMode"
+  ],
+  "interceptExternalSessions": true,
   "uiTimeoutSec": 600,
   "questionPromptTemplate": "The user answered your AskUserQuestion via the office UI. Their answers were:\n{ANSWERS}\nTreat these as the authoritative answers and continue. Do NOT call AskUserQuestion again for these questions.",
   "planAcceptedTemplate": "The user accepted your plan via the office UI. Proceed with execution.{FEEDBACK}",

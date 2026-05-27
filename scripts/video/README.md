@@ -70,9 +70,32 @@ node scripts/video/orchestrator.mjs
 scripts/video/
 ├── script.json           # narration + action cues (edit this to revise)
 ├── generate-tts.mjs      # OpenAI TTS + ffprobe duration manifest
-├── orchestrator.mjs      # Playwright + mock /hook driver
-├── record.sh             # ffmpeg + orchestrator + mux
+├── orchestrator.mjs      # Playwright + mock /hook driver (shared by both pipelines)
+├── record.sh             # long-form: ffmpeg + orchestrator + TTS mux
+├── teaser-manifest.json  # 20s no-narration beat timing
+├── record-teaser.sh      # teaser: ffmpeg + orchestrator + music mux
 ├── audio/                # per-beat mp3s + manifest.json (generated)
+│   └── teaser-music.mp3  # royalty-free music for the teaser (drop your own here)
 ├── tmp/                  # intermediate video/audio (generated)
-└── out/final.mp4         # final deliverable
+└── out/                  # final.mp4, teaser.mp4, *-web.mp4
 ```
+
+## 20s teaser variant
+
+A no-narration, music-only teaser drives the same UI via a different beat
+manifest:
+
+```bash
+# 1. Drop a royalty-free track at scripts/video/audio/teaser-music.mp3
+#    (or point TEASER_MUSIC=/path/to/track.mp3 when running).
+# 2. With `npm run dev` running:
+./scripts/video/record-teaser.sh
+```
+
+Output: `scripts/video/out/teaser.mp4` + `out/teaser-web.mp4`.
+
+The default music shipped with this pipeline is **"Pixelland" by Kevin
+MacLeod** (incompetech.com), licensed under
+[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). If you use it in a
+public-facing video, keep the attribution intact in the video description or
+README.

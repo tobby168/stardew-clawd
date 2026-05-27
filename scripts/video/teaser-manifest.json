@@ -1,0 +1,40 @@
+{
+  "$comment": "Timing manifest for the 20-second teaser. Showcases multi-worker spawn → AskUserQuestion → expand the foldable call-chip → multi-room (camera auto-fits as population grows) → scene cycle → expand the scene picker → outro (record-teaser.sh adds a post-prod ffmpeg crop+scale zoom-in to the usage bar during the final 2s).",
+  "beats": [
+    {
+      "id": "01-spawn-rush",
+      "durationSec": 3.0,
+      "action": "teaser-spawn-rush"
+    },
+    {
+      "id": "02-ask-answer",
+      "durationSec": 3.5,
+      "action": "teaser-ask-answer"
+    },
+    {
+      "id": "03-expand-calls",
+      "durationSec": 2.5,
+      "action": "teaser-expand-calls"
+    },
+    {
+      "id": "04-multiroom",
+      "durationSec": 4.0,
+      "action": "teaser-multiroom"
+    },
+    {
+      "id": "05-scene-cycle",
+      "durationSec": 3.0,
+      "action": "teaser-cycle-themes"
+    },
+    {
+      "id": "06-expand-scenes",
+      "durationSec": 2.0,
+      "action": "teaser-expand-scenes"
+    },
+    {
+      "id": "07-outro",
+      "durationSec": 2.0,
+      "action": "teaser-outro"
+    }
+  ]
+}

@@ -39,11 +39,11 @@ async function sendHook(payload) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const CWDS = [
-  '/Users/tobby168/Repositories/awesome-project',
-  '/Users/tobby168/Repositories/data-pipeline',
-  '/Users/tobby168/Repositories/billing-service',
-  '/Users/tobby168/Repositories/mobile-app',
-  '/Users/tobby168/Repositories/internal-tools',
+  '/Users/demo/awesome-project',
+  '/Users/demo/data-pipeline',
+  '/Users/demo/billing-service',
+  '/Users/demo/mobile-app',
+  '/Users/demo/internal-tools',
 ];
 
 const PROMPTS = [
